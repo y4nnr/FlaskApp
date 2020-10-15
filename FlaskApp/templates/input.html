@@ -1,0 +1,68 @@
+<html>
+    <head>
+      <script src="{{url_for('static', filename='script.js')}}"></script>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <title>{{ title }}</title>
+    </head>
+    <body>
+  <div class="logo">
+    <br>
+    <form action="/save" method="POST">
+        <table style="margin-left: 20px;"> 
+            <!-- Table headers -->
+            <th> 
+            <tr style="color: rgb(255, 255, 255); ">     
+            <td># New Sales</td> 
+            <td>Phone Model</td> 
+            </tr> 
+            </th> 
+             <tr>
+             <td> <input name="field"></td>
+             <td><input name="value"></td>
+             <td><input type="submit" value="Save"></td>
+            </tr> 
+        </table>
+    </form> 
+<br>
+<form action="/save_tablet" method="POST">
+    <table style="margin-left: 20px;"> 
+        <!-- Table headers -->
+        <th> 
+        <tr style="color: rgb(255, 255, 255); ">     
+        <td># New Sales</td> 
+        <td>Tablet Model</td> 
+        </tr> 
+        </th> 
+         <tr>
+         <td> <input name="field_tablet"></td>
+         <td><input name="value_tablet"></td>
+         <td><input type="submit" value="Save"></td>
+        </tr> 
+    </table>
+</form> 
+<br>
+      <form action="/get" method="POST">
+        <table style="margin-left: 20px;"> 
+            <!-- Table headers -->
+            <th> 
+            <tr style="color: rgb(255, 255, 255); ">     
+            <td>Read a Key</td>
+            </tr> 
+            </th>
+            <tr>
+            <td><input name="field"></td>
+             <td><input type="submit" value="Get"></td>
+            </tr> 
+        </table>
+      </form>
+  </div>
+  <br>
+  <a href="/">Home</a>
+
+    </body>
+</html>
+
+
+
+      
+

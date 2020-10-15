@@ -1,0 +1,34 @@
+<html>
+    <head>
+      <script src="{{url_for('static', filename='script.js')}}"></script>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <title>{{ title }}</title>
+    </head>
+ 
+    <body>
+   <div class="logo">
+    <br>
+   
+        {% if saved %}
+        <b>saved</b><br><br>
+        New value for {{ phone }} >>> {{ value }}
+        {% endif %}
+
+        {% if saved_tablet %}
+        <b>saved</b><br><br>
+        New value for {{ tablet }} >>> {{ value_tablet }}
+        {% endif %}
+        
+        {% if field %}
+          The value of <b>{{ field }}</b> is <b>{{ value }}</b>
+        {% endif %}
+  <br/>
+  </div>
+  <br>
+  <a href="/">Home</a>
+  <br>
+  <a href="/input">Update</a>
+    </body>
+</html>
+
+
